@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Sales Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                50: '#eef2ff',
+                100: '#e0e7ff',
+                200: '#c7d2fe',
+                300: '#a5b4fc',
+                400: '#818cf8',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+                800: '#3730a3',
+                900: '#312e81',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8fafc;
+      }
+      
+      /* Custom scrollbar for sidebar */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+      }
+    </style>
+    <script>
+      window.onerror = function(message, source, lineno, colno, error) {
+        console.error("Global Error:", message, error);
+        const root = document.getElementById('root');
+        if (root && root.innerHTML.trim() === '') {
+            const errorDiv = document.createElement('div');
+            errorDiv.style.position = 'fixed';
+            errorDiv.style.top = '0';
+            errorDiv.style.left = '0';
+            errorDiv.style.width = '100%';
+            errorDiv.style.padding = '20px';
+            errorDiv.style.fontFamily = 'monospace';
+            errorDiv.style.fontSize = '14px';
+            errorDiv.style.color = '#7f1d1d';
+            errorDiv.style.backgroundColor = '#fef2f2';
+            errorDiv.style.zIndex = '9999';
+            errorDiv.innerHTML = `
+              <h3 style="font-weight:bold; margin-bottom:8px;">Erro na Inicialização da Aplicação</h3>
+              <p style="margin-bottom:8px;">${message}</p>
+              <p style="font-size:12px; color:#991b1b;">Isso geralmente ocorre por problemas de carregamento de bibliotecas externas via CDN ou conflito de versões do React.</p>
+            `;
+            document.body.prepend(errorDiv);
+        }
+      };
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.3.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.454.0?deps=react@18.3.1",
+    "recharts": "https://esm.sh/recharts@2.12.7?deps=react@18.3.1",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.39.7",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "xlsx": "https://esm.sh/xlsx@0.18.5",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
